@@ -1,0 +1,8 @@
+__pycache__
+venv
+*.py[co]
+.idea/
+media/
+tmp/
+*.sqlite3
+
