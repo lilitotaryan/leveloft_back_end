@@ -15,5 +15,11 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = '../media/static/'
+STATIC_URL = 'https://api.leveloft.am/static/'
+
+
+MEDIA_URL = 'https://api.leveloft.am/dynamic/'
+MEDIA_ROOT = "../media/dynamic/"
 
 HTTP_X_API_KEY = "6b551c62427b96ced354ad375fa09c09e705c3fa38ba27465a7469b9faed3acceccfea295a935cfae03f990d7188397b8b57518f79ff43383d93b4d28f16eecc"
