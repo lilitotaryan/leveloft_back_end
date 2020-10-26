@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-AUTH_USER_MODEL = 'authentication.User'
+# AUTH_USER_MODEL = 'authentication.User'
 
 APPEND_SLASH = True
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'authentication.apps.AuthenticationConfig'
+    'rest_framework',
+    'main_app.apps.MainAppConfig'
 ]
 
 MIDDLEWARE = [
@@ -104,6 +105,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'error_handlers.custom_error_handler',
+    'DEFAULT_PAGINATION_CLASS': 'paginators.StandardResultsSetPagination'
+}
 
 
 # Internationalization
